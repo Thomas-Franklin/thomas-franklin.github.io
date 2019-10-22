@@ -8,14 +8,8 @@ collections:
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
-pagination:
-  enabled: true
-  per_page: 10
-  permalink: '/page/:num/'
-  title: ':title - page :num of :max'
-  limit: 0
-  sort_field: 'date'
-  sort_reverse: true
+paginate: 10
+paginate_path: "/page/:num"
 
 defaults:
   -
