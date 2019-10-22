@@ -1,3 +1,26 @@
 theme: jekyll-theme-midnight
 title: Thomas Franklin
 description: 🤷‍♂️ not sure what I am doing.
+collections:
+  category:
+    output: true
+
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+
+pagination:
+  enabled: true
+  per_page: 10
+  permalink: '/page/:num/'
+  title: ':title - page :num of :max'
+  limit: 0
+  sort_field: 'date'
+  sort_reverse: true
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: category
+    values:
+      layout: "category"
