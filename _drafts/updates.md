@@ -1,0 +1,15 @@
+---
+layout: post
+author: Thomas
+title: Updates
+categories:
+- blog
+tags:
+- updates
+
+---
+> Previously on the web... a blog was started
+
+I did have good intentions of starting a semi regular blog, then I realised I haven't gotten anything overly exciting to share, however.. Lately I've been working a lot with Open Banking, I aim to share more of this in the coming weeks.
+
+Open Banking is an exciting new challenge, and building out a service to connect with and communicate across several APIs while being performant and secure is fun, and engaging. Hopefully my ramblings in the future will make sense..
