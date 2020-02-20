@@ -21,9 +21,19 @@
             with a thirst for learning<br />
         </h1>
     </div>
+    <section id="nav">
+        <div class="inner">
+            <ul style="list-style-type: none;">
+                <li><a href="{{ 'about' | relative_url }}">About</a></li>
+            </ul>
+        </div>
+    </section>
 </header>
 
 <div id="main">
+    <ul class="actions">
+        <li><button class="button" onclick="clickButton()" id="show-nav">Hide Nav</button></li>
+    </ul>
     {{content}}
 </div>
 
@@ -48,6 +58,22 @@
 <script src="{{ 'assets/js/breakpoints.min.js?v=' | append: site.github.build_revision | relative_url }}"></script>
 <script src="{{ 'assets/js/util.js?v=' | append: site.github.build_revision | relative_url }}"></script>
 <script src="{{ 'assets/js/main.js?v=' | append: site.github.build_revision | relative_url }}"></script>
+
+<script>
+    let shown = true;
+    function clickButton() {
+		if (shown) {
+			document.getElementById('header').style = 'display: none';
+			document.getElementById('main').style = 'margin-left: 20%!important; margin-right: 20%!important; max-width: 100%!important; width: calc(100% - 40%);';
+            document.getElementById('show-nav').innerText = 'Show Nav';
+        } else {
+			document.getElementById('header').style = 'background-position: left 0px; display: flex;';
+			document.getElementById('main').style = 'margin-left: 35%; max-width: 100%!important; width: calc(100% - 35%);';
+			document.getElementById('show-nav').innerText = 'Hide Nav';
+        }
+        shown= !shown;
+	}
+</script>
 
 </body>
 </html>
