@@ -9,6 +9,22 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="{{ 'assets/css/main.css?v=' | append: site.github.build_revision | relative_url }}" />
+    <style>
+        html, body {
+            height: 100% !important;
+        }
+        body {
+            display: flex !important;
+            flex-direction: column !important;
+            height: 100vh;
+        }
+        .content {
+            flex: 1 0 auto !important;
+        }
+        .footer {
+            flex-shrink: 0 !important;
+        }
+    </style>
 </head>
 
 <body class="is-preload">
@@ -30,7 +46,7 @@
     </section>
 </header>
 
-<div id="main">
+<div id="main" class="content">
     <ul class="actions">
         <li><button class="button" onclick="clickButton()" id="show-nav">Hide Nav</button></li>
     </ul>
@@ -38,7 +54,7 @@
 </div>
 
 <!-- Footer -->
-<footer id="footer">
+<footer id="footer" class="footer">
     <div class="inner">
         <ul class="icons">
             <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
