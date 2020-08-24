@@ -1,3 +1,4 @@
 _site/
 Gemfile.*
 .idea/
+.DS_Store

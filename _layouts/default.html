@@ -1,95 +1,71 @@
-<html>
+<!DOCTYPE HTML>
 <!--
-	Strata by HTML5 UP
+	Read Only by HTML5 UP
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
+<html>
 <head>
     <title>{{ site.title }}</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="{{ 'assets/css/main.css?v=' | append: site.github.build_revision | relative_url }}" />
-    <style>
-        html, body {
-            height: 100% !important;
-        }
-        body {
-            display: flex !important;
-            flex-direction: column !important;
-            height: 100vh;
-        }
-        .content {
-            flex: 1 0 auto !important;
-        }
-        .footer {
-            flex-shrink: 0 !important;
-        }
-    </style>
 </head>
-
 <body class="is-preload">
 
 <!-- Header -->
-<header id="header">
-    <div class="inner">
-        <img class="image avatar" src="{{ 'assets/images/avatar.jpg?v=' | append: site.github.build_revision | relative_url }}" alt="" />
-        <h1><strong>I am Thomas</strong>, a Software Engineer<br />
-            with a thirst for learning<br />
-        </h1>
-    </div>
-    <section id="nav">
-        <div class="inner">
-            <ul style="list-style-type: none;">
-                <li><a href="{{ 'about' | relative_url }}">About</a></li>
-            </ul>
-        </div>
-    </section>
-</header>
-
-<div id="main" class="content">
-    <ul class="actions">
-        <li><button class="button" onclick="clickButton()" id="show-nav">Hide Nav</button></li>
-    </ul>
-    {{content}}
-</div>
-
-<!-- Footer -->
-<footer id="footer" class="footer">
-    <div class="inner">
+<section id="header">
+    <header>
+        <span class="image avatar"><img src="{{ 'assets/images/avatar.jpg?v=' | append: site.github.build_revision | relative_url }}" alt="" /></span>
+        <h1 id="logo"><a href="#">Thomas Franklin</a></h1>
+        <p>A Software Engineer<br />
+            with a thirst for learning</p>
+    </header>
+    <nav id="nav">
+        <ul>
+            <li><a href="#one" class="active">About</a></li>
+            <li><a href="#two">Blog</a></li>
+        </ul>
+    </nav>
+    <footer>
         <ul class="icons">
             <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+            <li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
             <li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
             <li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
         </ul>
-        <ul class="copyright">
-            <li>&copy; Thomas Franklin</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-        </ul>
+    </footer>
+</section>
+
+<!-- Wrapper -->
+<div id="wrapper">
+
+    <!-- Main -->
+    <div id="main">
+
+        {{content}}
+
     </div>
-</footer>
+
+    <!-- Footer -->
+    <section id="footer">
+        <div class="container">
+            <ul class="copyright">
+                <li>&copy; Thomas Franklin. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+            </ul>
+        </div>
+    </section>
+
+</div>
 
 <!-- Scripts -->
 <script src="{{ 'assets/js/jquery.min.js?v=' | append: site.github.build_revision | relative_url }}"></script>
-<script src="{{ 'assets/js/jquery.poptrox.min.js?v=' | append: site.github.build_revision | relative_url }}"></script>
+<script src="{{ 'assets/js/jquery.scrollex.min.js?v=' | append: site.github.build_revision | relative_url }}"></script>
+<script src="{{ 'assets/js/jquery.scrolly.min.js?v=' | append: site.github.build_revision | relative_url }}"></script>
 <script src="{{ 'assets/js/browser.min.js?v=' | append: site.github.build_revision | relative_url }}"></script>
 <script src="{{ 'assets/js/breakpoints.min.js?v=' | append: site.github.build_revision | relative_url }}"></script>
 <script src="{{ 'assets/js/util.js?v=' | append: site.github.build_revision | relative_url }}"></script>
 <script src="{{ 'assets/js/main.js?v=' | append: site.github.build_revision | relative_url }}"></script>
-
-<script>
-    let shown = true;
-    function clickButton() {
-		if (shown) {
-			document.getElementById('header').style = 'display: none';
-			document.getElementById('main').style = 'margin-left: 20%!important; margin-right: 20%!important; max-width: 100%!important; width: calc(100% - 40%);';
-            document.getElementById('show-nav').innerText = 'Show Nav';
-        } else {
-			document.getElementById('header').style = 'background-position: left 0px; display: flex;';
-			document.getElementById('main').style = 'margin-left: 35%; max-width: 100%!important; width: calc(100% - 35%);';
-			document.getElementById('show-nav').innerText = 'Hide Nav';
-        }
-        shown= !shown;
-	}
-</script>
 
 </body>
 </html>
