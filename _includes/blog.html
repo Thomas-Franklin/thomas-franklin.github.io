@@ -2,11 +2,11 @@
 <section id="two">
     <div class="container">
         <h3>Blog</h3>
-        <ul>
+        <div class="row">
             {% for post in paginator.posts %}
             {% include post_preview.html post=post %}
             {% endfor %}
-        </ul>
+        </div>
 
         {% if paginator.total_pages > 1 %}
         <ul class="pager">
