@@ -14,9 +14,6 @@
         body,
         html {
             height: 100%;
-            background: #007991;
-            background: -webkit-linear-gradient(to right, #007991, #78ffd6);
-            background: linear-gradient(to right, #007991, #78ffd6);
         }
 
         .countdown {
@@ -85,9 +82,9 @@
         }
 
         .bg-gradient-4 {
-            background: #007991;
-            background: -webkit-linear-gradient(to right, #007991, #78ffd6);
-            background: linear-gradient(to right, #007991, #78ffd6);
+            background: #FFDEE9;
+            background: -webkit-linear-gradient(to bottom, #FFDEE9, #B5FFFC);
+            background: linear-gradient(to bottom, #FFDEE9, #B5FFFC);
         }
 
         .rounded {
@@ -131,16 +128,21 @@
 
     <script>
         $(function () {
-            $('#clock-b').countdown('2021/04/30', function (event) {
-                var $this = $(this).html(event.strftime(''
-                    + '<span class="h1 font-weight-bold">%D</span> Day%!d'
-                    + '<span class="h1 font-weight-bold">%H</span> Hr'
-                    + '<span class="h1 font-weight-bold">%M</span> Min'
-                    + '<span class="h1 font-weight-bold">%S</span> Sec'));
-            });
+            $('#clock-b').countdown('2021/04/22 12:00:00')
+                .on('finish.countdown', function (event) {
+                    $('#clocks').hide();
+                    $('#announcement').show();
+                })
+                .on('update.countdown', function (event) {
+                    $(this).html(
+                        event.strftime(''
+                            + '<span class="h1 font-weight-bold">%D</span> Day%!d'
+                            + '<span class="h1 font-weight-bold">%H</span> Hr'
+                            + '<span class="h1 font-weight-bold">%M</span> Min'
+                            + '<span class="h1 font-weight-bold">%S</span> Sec'));
+                }).countdown('start');
 
         });
-
     </script>
 
     <!-- Option 2: Separate Popper and Bootstrap JS -->
