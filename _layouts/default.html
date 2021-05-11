@@ -128,7 +128,8 @@
 
     <script>
         $(function () {
-            $('#clock-b').countdown('2021/04/22 12:00:00')
+            const sixty = new Date().getTime() + 60_000;
+            $('#clock-b').countdown(sixty)
                 .on('finish.countdown', function (event) {
                     $('#clocks').hide();
                     $('#announcement').show();
